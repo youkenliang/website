@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link, useMatch, useResolvedPath} from 'react-router-dom';
+import Bottom from './pages/Bottom';
 
 function NavBar(){
     return(

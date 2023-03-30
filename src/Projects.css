@@ -1,0 +1,98 @@
+/* work */
+/* .work {
+    display: grid;
+    grid-auto-columns: auto;
+    column-gap: 5%;
+    row-gap: 5%;
+    margin: 5rem 
+}
+.w-image {
+    grid-column: 1/2
+}
+.w-descript {
+    font-family: 'Times New Roman';
+    grid-column: 2/3 
+}
+.w2 {
+    grid-column: 1/2;
+}
+.w2s {
+    font-family: 'Times New Roman';
+    grid-column: 2/3 
+} */
+
+
+/* Global styles */
+/* body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #222;
+}
+  
+  a {
+    text-decoration: none;
+    color: #4CAF50;
+}
+  
+  /* Header styles */
+  /* header {
+    background-color: #4CAF50;
+    padding: 20px;
+}
+  
+  h1 {
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+} */ 
+
+/* Projects styles */
+.projects-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+/* align-items: center; */
+}
+
+.project {
+margin: 20px;
+border-radius: 10px;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+overflow: hidden;
+width: 300px;
+/* height: 400px; */
+position: relative;
+transition: transform 0.3s ease-in-out;
+}
+
+.project:hover {
+transform: translateY(-10px);
+}
+
+.project img {
+display: block;
+width: 100%;
+height: 60%;
+object-fit: cover;
+}
+
+.project .content {
+padding: 20px;
+}
+
+.project h2 {
+margin-top: 0;
+}
+
+.project p {
+margin-bottom: 20px;
+}
+
+.project a {
+display: block;
+margin-top: auto;
+text-align: center;
+font-weight: bold;
+}
+
