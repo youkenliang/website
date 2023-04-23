@@ -34,7 +34,7 @@ function App() {
         {/* <Route exact path="/projects/:id" element={<ProjectDetails/>}/> */}
         <Route path="/contact" element={<Contact/>}/>
       </Routes>
-      {/* <Bottom/> */}
+      <Bottom/>
     </div>
   );
 } 
