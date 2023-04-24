@@ -1,17 +1,31 @@
 import React from 'react';
+import qieSetUp from '../assets/qieSetUp.png';
+import qieReport from '../assets/documents/QIE_report.pdf';
 // import './QuantumMechanicsProject.css';
 
 function QuantumMechanicsProject() {
   return (
     <div className="project-container">
-      <h2>Introduction to Quantum Mechanics</h2>
+      <h2>Quantum Interference & Entanglement</h2>
       <div className="project-info">
-        <p>Quantum mechanics is a fundamental theory in physics that describes the behavior of matter and energy at the atomic and subatomic scale. It's a fascinating field that has many implications for technology and our understanding of the universe.</p>
-        <p>In this project, we'll explore some of the key concepts of quantum mechanics and their applications. Let's get started!</p>
-        <iframe title="Introduction to Quantum Mechanics" width="560" height="315" src="https://www.youtube.com/embed/kJzSzGbfc0k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Hydrogen_Density_Plots.png/1280px-Hydrogen_Density_Plots.png" alt="Hydrogen Density Plots" />
-        <p>The image above shows the density plots for hydrogen, one of the most basic elements in the universe. It was created using quantum mechanics calculations and demonstrates the wave-like nature of electrons in atoms.</p>
-        <p>There are many fascinating topics to explore in quantum mechanics, such as entanglement, superposition, and quantum computing. We hope this project has sparked your interest in this exciting field!</p>
+        <p>This lab investigates quantum entanglement and interference and attempts to violate 
+          Bell’s inequality. The experimental setup includes a source of entangled photons and 
+          detectors to measure the photons’ coincidence. The results of the experiment provide 
+          evidence for validating quantum mechanics against local hidden variable theories.</p>
+        <div className='InShort'>
+          <ul>
+            <p>In short:</p>
+            <li>Use diode laser and halfwave plates to generate entangled photons</li>
+            <li>Use infrared lasers and beam splitter cubes to calibrate the photons path</li>
+            <li>Utilize photodiode detectors and LabView to optimize the coincidence rate of photons</li>
+            <li>Analyze the measurement data and compared with theoretical predictions</li>
+          </ul>
+          <a href={qieReport}>Click to view a detailed report of the experiment</a>
+          {/* using google for pdf
+          <a href="https://drive.google.com/file/d/1AsK7XLblgviFMIE1uLxlZsC5AY0taHVU/view?usp=sharing">Click to view a detailed report of the experiment</a> */}
+          
+        </div>
+        <img src={qieSetUp} alt="QIE setup" />
       </div>
     </div>
   );
