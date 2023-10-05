@@ -1,0 +1,36 @@
+.bottom{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.bottom-layout {
+  background-color:#003262;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  justify-content: space-around;
+  grid-auto-columns:auto;
+  align-items:center; 
+}
+#logo{
+  display:flex;
+  flex-direction:column;
+  font-size: 100px;
+  margin: 1rem;
+}
+.bottom-layout:hover{color:#FDB515;}
+
+.info{
+  display:flex;
+  flex-direction: column;
+  margin: 0.5rem;
+}
+/* .socialmedia{
+  display: grid;
+  font-size: large;
+  grid-column: 3/4;
+  margin: 1rem;
+} */
