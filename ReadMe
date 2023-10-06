@@ -1,9 +1,0 @@
-Heroku
-
-n /server/package.json, change {"start": "nodemon index.js"} to {}
-
-
-In /client/package.json, change {"deploy": "react-scripts build"} to {"deploy": "react-scripts build && (cd ../server && npm install)"}
-
-In /client/package.json, change {"start": "react-scripts start"} to {"start-client": "react-scripts start"}
-
