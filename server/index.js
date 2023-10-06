@@ -43,10 +43,10 @@ db.connect((err) => {
   });
   
 
-app.get("/",(req,res)=>{
+app.get("/*",(req,res)=>{
     // res.json("Hello, this is the backend la")
     res.sendFile(
-        path.join(__dirname, "../client/build/index,html"),
+        path.join(__dirname, "../client/build/index.html"),
         function (err) {
             if (err) {
                 res.status(500).send(err);
