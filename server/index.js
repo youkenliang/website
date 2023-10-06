@@ -3,14 +3,26 @@
 // npm start
 
 
-import express from 'express';
-import mysql from 'mysql';
-import cors from 'cors';
+// import express from 'express';
+// import mysql from 'mysql';
+// import cors from 'cors';
 
+
+const express = require('express');
+const mysql = require('mysql');
+const cors = require('cors');
+
+const path = require('path')
 const app = express()
+
+
+
+// app.use(express.static(path.join(__dirname + "/public")))
 
 app.use(express.json())
 app.use(cors())
+
+const PORT = process.env.PORT || 5000
 
 const db = mysql.createConnection({
     host: "localhost",
@@ -83,6 +95,6 @@ app.put("/problems/:id", (req, res)=>{
     });
 })
 
-app.listen(5000, ()=>{
-    console.log('Connected to backend! Server is running on http://localhost:5000')
+app.listen(PORT, ()=>{
+    console.log("Connected to backend! Server is running on http://localhost:" + PORT)
 } )
