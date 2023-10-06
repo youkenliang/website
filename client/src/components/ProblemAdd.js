@@ -25,7 +25,7 @@ const ProblemAdd = () => {
           }
         
         try{
-            axios.post("http://localhost:5000/problems", ProblemInput)
+            axios.post("https://website-liang-9051bfce25a8.herokuapp.com/problems", ProblemInput)
             setProblemInput({statement:"",name:"",email:"",});
             setTimeout(() => {
                 alert('Thanks for your input. Your are one step closer to solving the problem!'); // Show an alert message after a short delay

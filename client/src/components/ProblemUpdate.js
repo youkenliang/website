@@ -28,7 +28,7 @@ const ProblemUpdate = () => {
           }
         
         try{
-            axios.put("http://localhost:5000/problems/"+problemId, ProblemInput)
+            axios.put("https://website-liang-9051bfce25a8.herokuapp.com//problems/"+problemId, ProblemInput)
             navigate("/contact/sets")
             setTimeout(() => {
                 alert('Updated'); // Show an alert message after a short delay

@@ -11,7 +11,7 @@ const ProblemSet = () => {
     useEffect(()=>{
         const fetchAllProblems = async()=>{
             try{
-                const res = await axios.get("http://localhost:5000/problems")
+                const res = await axios.get("https://website-liang-9051bfce25a8.herokuapp.com/problems")
                 setProblems(res.data);
             }catch(err){
                 console.log(err)
@@ -22,7 +22,7 @@ const ProblemSet = () => {
 
     const handleDelete = async (id)=>{
         try{
-            await axios.delete("http://localhost:5000/problems/"+id)
+            await axios.delete("https://website-liang-9051bfce25a8.herokuapp.com/problems/"+id)
             window.location.reload()
         }catch(err){
             console.log(err)
