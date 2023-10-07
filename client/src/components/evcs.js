@@ -37,8 +37,8 @@ function ElectricVehicleChargingStationsProject() {
           <button>
             <a href={evcsPresentation}> <img src={slideIcon} alt="SLIDES" /></a>
           </button>
-          <button>
-            <a href={evcsPresentation}> <img src={githubIcon} alt="GITHUB" /> </a>
+          <button> 
+            <a href="https://github.com/youkenliang/cp88/tree/main/hw4"> <img src={githubIcon} alt="GITHUB" /> </a>
           </button>
 
           
