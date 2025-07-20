@@ -1,9 +1,8 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import "./index.css";
-import './Bottom.css';
-import './Projects.css';
+import './css/bottom.css';
+import './css/projects.css';
 
 import Home from './pages/Home';
 import About from './pages/About';
@@ -16,10 +15,7 @@ import QuantumMechanicsProject from './components/labQIE';
 import OpticalPumpingProject from './components/labOPT';
 import MuonLifetimeProject from './components/labMUO';
 import ElectricVehicleChargingStationsProject from './components/evcs';
-import ProblemAdd from './components/ProblemAdd';
-import ProblemUpdate from './components/ProblemUpdate';
 import ProblemSets from './components/ProblemSets';
-import Feed from "./components/ContactFeed";
 
 function App() {
   return (
@@ -35,10 +31,8 @@ function App() {
         <Route path="/projects/muo" element={<MuonLifetimeProject/>}/>
         <Route path="/projects/opt" element={<OpticalPumpingProject/>}/>
         <Route path="/projects/evcs" element={<ElectricVehicleChargingStationsProject/>}/>
-        <Route path="/contact" element={<ProblemAdd/>}/>
-        {/* <Route path="/contact/add" element={<ProblemAdd/>}/> */}
-        <Route path="/update/:id" element={<ProblemUpdate/>}/>
-        <Route path="/contact/sets" element={<ProblemSets/>}/>
+        <Route path="/contact" element={<Contact/>}/>
+        <Route path="/problems" element={<ProblemSets/>}/>
       </Routes>
       </div>
       <Bottom/>
@@ -47,18 +41,3 @@ function App() {
 } 
 
 export default App;
-
-
-// import Navbar from "./Components/Navbar";
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <Navbar/>
-//       <h1>Blockstagram</h1>
-//       <Feed/>
-//     </div>
-//   );
-// }
-
-// export default App;

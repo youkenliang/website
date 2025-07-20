@@ -1,8 +1,7 @@
 import React from 'react';
-import Bottom from './Bottom';
 import bighead from '../assets/bighead.png';
 
-import '../About.css';
+import '../css/about.css';
 
 function About() {
   return (
@@ -18,12 +17,13 @@ function About() {
           <div className="text">
             <h2>Youcan Liang</h2>
             <p> </p>
-            <p>I recently obtained my Bachelor's degree in Physics from UC Berkeley.</p>
+            <p>I'd rather be traveling than writing about myself.</p>
             <br/>
             <p>Things that fascinate me:</p>
-            <p><i>Three-Body Problem</i></p>
-            <p><i>Someday or One Day</i></p>
             <p>Cheap flight from SFO to HKG</p>
+            <p><i>Three-Body Problem</i></p>
+            <p>Wireless Charging</p>
+            
             {/* <a href="#">Download Resume</a> */}
           </div>
         </div>

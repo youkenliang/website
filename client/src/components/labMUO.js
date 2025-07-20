@@ -1,8 +1,7 @@
 import React from 'react';
-// import muotSetUp from '../assets/muoSetUp.png';
 import muoReport from '../assets/documents/MUO_Report.pdf';
 import pdfIcon from "../assets/pdf.png";
-import '../Projects.css';
+import '../css/projects.css';
 
 function MuonLifetimeProject() {
   return (

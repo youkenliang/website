@@ -2,7 +2,7 @@ import React from 'react';
 import optSetUp from '../assets/optSetUp.png';
 import optReport from '../assets/documents/OPT_Report.pdf';
 import pdfIcon from "../assets/pdf.png";
-import '../Projects.css';
+import '../css/projects.css';
 
 function OpticalPumpingProject() {
   return (
@@ -39,17 +39,5 @@ function OpticalPumpingProject() {
     </div></>
   );
 }
-
-
-<div className="hero-container">
-  <video autoPlay muted loop>
-    <source src="https://drive.google.com/file/d/1uPvvKDy1eoqkeVpyEgmqvapaMfY2i6Fs/preview" type="video/mp4" />
-  </video>
-  <div className="hero-text">
-    <h1>Project Name</h1>
-    <p>Description of the project</p>
-  </div>
-</div>
-
 
 export default OpticalPumpingProject;

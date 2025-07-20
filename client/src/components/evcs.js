@@ -1,11 +1,10 @@
 import React from 'react';
-import optSetUp from '../assets/optSetUp.png';
 import evcsReport from '../assets/documents/CE88_Report.pdf';
 import evcsPresentation from '../assets/documents/CE88_Presentation.pdf'
 import pdfIcon from "../assets/pdf.png";
 import slideIcon from "../assets/googleSlides.png";
 import githubIcon from "../assets/github.png";
-import '../Projects.css';
+import '../css/projects.css';
 
 function ElectricVehicleChargingStationsProject() {
   return (
@@ -50,17 +49,5 @@ function ElectricVehicleChargingStationsProject() {
     </div></>
   );
 }
-
-
-<div className="hero-container">
-  <video autoPlay muted loop>
-    <source src="https://drive.google.com/file/d/1uPvvKDy1eoqkeVpyEgmqvapaMfY2i6Fs/preview" type="video/mp4" />
-  </video>
-  <div className="hero-text">
-    <h1>Project Name</h1>
-    <p>Description of the project</p>
-  </div>
-</div>
-
 
 export default ElectricVehicleChargingStationsProject;

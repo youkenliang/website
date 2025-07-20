@@ -2,7 +2,7 @@ import React from 'react';
 import qieSetUp from '../assets/qieSetUp.png';
 import qieReport from '../assets/documents/QIE_report.pdf';
 import pdfIcon from "../assets/pdf.png";
-import '../Projects.css';
+import '../css/projects.css';
 
 function QuantumMechanicsProject() {
   return (

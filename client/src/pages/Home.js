@@ -1,15 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Bottom from './Bottom';
-import About from './About'; // Import other components (About, Project, Contact)
-import Projects from './Projects';
-import Contact from './Contact';
-import qieCover from '../assets/qieCover.png';
-import optCover from '../assets/optCover.png';
-import muoCover from '../assets/muoCover.png';
-import '../Home.css';
-
-import { Flex, Heading, Text, ChakraProvider } from '@chakra-ui/react';
+import '../css/home.css';
 
 function Home(){
     return(
