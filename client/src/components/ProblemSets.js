@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import "../css/contact.css";
 
 const ProblemSet = () => {
+    console.log('=== PROBLEMSET COMPONENT STARTING ===');
+    
     const [problems, setProblems] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -10,14 +12,22 @@ const ProblemSet = () => {
     const [password, setPassword] = useState('');
     const [authError, setAuthError] = useState('');
 
+    console.log('ProblemSet component rendered');
+    console.log('isAuthenticated:', isAuthenticated);
+    console.log('loading:', loading);
+    console.log('error:', error);
+
     // Use environment variable for password - more secure
-    const ADMIN_PASSWORD = process.env.REACT_APP_ADMIN_PASSWORD || 'admin123';
+    const ADMIN_PASSWORD = process.env.REACT_APP_ADMIN_PASSWORD;
     console.log('Environment variable loaded:', !!process.env.REACT_APP_ADMIN_PASSWORD);
     console.log('Password length:', ADMIN_PASSWORD ? ADMIN_PASSWORD.length : 0);
+    console.log('Current environment:', process.env.NODE_ENV);
+    console.log('Using password:', ADMIN_PASSWORD);
+
     const handleLogin = (e) => {
         e.preventDefault();
         console.log('Login attempt with password length:', password.length);
-        console.log('Expected password length:', ADMIN_PASSWORD.length);
+        console.log('Expected password length:', ADMIN_PASSWORD ? ADMIN_PASSWORD.length : 0);
         console.log('Password match:', password === ADMIN_PASSWORD);
         
         if (password === ADMIN_PASSWORD) {
@@ -73,12 +83,30 @@ const ProblemSet = () => {
         }
     };
 
+    // Check if environment variable is available (after hooks)
+    if (!ADMIN_PASSWORD) {
+        return (
+            <div className="contactPage">
+                <div className="problemForm">
+                    <h2>🔧 Configuration Error</h2>
+                    <p>Admin password not configured. Please check environment variables.</p>
+                    <div style={{ textAlign: 'center', marginTop: '20px' }}>
+                        <Link to="/contact" style={{ color: '#007bff', textDecoration: 'none' }}>
+                            ← Back to Contact
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
     // Show login form if not authenticated
     if (!isAuthenticated) {
         return (
             <div className="contactPage">
                 <div className="problemForm">
                     <h2>🔒 Admin Access Required</h2>
+                    <p>Debug: Component is rendering correctly</p>
                     <form onSubmit={handleLogin}>
                         <div style={{ marginBottom: '20px' }}>
                             <input 
@@ -141,7 +169,7 @@ const ProblemSet = () => {
                         </button>
                         <br/><br/>
                         <Link to="/contact" style={{ color: '#007bff', textDecoration: 'none' }}>
-                            ← Back to Submit Problem
+                            ← Back to Contact
                         </Link>
                     </div>
                 </div>
@@ -170,17 +198,17 @@ const ProblemSet = () => {
                                 <p>Name: {problem.name || 'Anonymous'}</p>
                                 <p>Email: {problem.email || 'Not provided'}</p>
                                 <p>Submitted: {formatDate(problem.timestamp)}</p>
-                </div>
-            ))}
+                            </div>
+                        ))}
                     </div>
                 )}
                 <div style={{ textAlign: 'center', marginTop: '20px' }}>
                     <Link to="/contact" style={{ color: '#007bff', textDecoration: 'none' }}>
-                        ← Back to Submit Problem
+                        ← Back to Contact
                     </Link>
                 </div>
-        </div> 
-    </div>
+            </div>
+        </div>
     );
 };
 
